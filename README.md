@@ -88,17 +88,11 @@ See **[DESIGN.md](./DESIGN.md)** for design details.
    - Description: *Fraud Detection Dashboard — interactive dashboard for fraud-related insights*
    - Do **not** initialize with a README (this repo already has one).
 
-2. **Add the remote and push** (replace `YOUR_USERNAME` with your GitHub username):
+2. **Add the remote and push**:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/fraud-detection-dashboard.git
-git branch -M main
+git remote add origin https://github.com/nadaveshed/fraud-detection-dashboard.git
 git push -u origin main
 ```
 
-If your default branch is already `master` and you want to keep it:
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/fraud-detection-dashboard.git
-git push -u origin master
-```
+(Remote is already set to `nadaveshed` if you used the project as-is.)

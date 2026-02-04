@@ -44,7 +44,6 @@ export function TransactionsChart({ data, startDate, endDate }: TransactionsChar
 
   const xMin = startDate ? dateStringToTimestamp(startDate, false) : undefined;
   const xMax = endDate ? dateStringToTimestamp(endDate, true) : undefined;
-  // Force ticks at start/end so the chosen date range appears on the axis
   const xStep =
     xMin != null && xMax != null && xMax > xMin ? (xMax - xMin) / 4 : undefined;
 
@@ -69,7 +68,7 @@ export function TransactionsChart({ data, startDate, endDate }: TransactionsChar
     scales: {
       x: {
         type: "linear",
-        title: { display: true, text: "Date" },
+        title: { display: true, text: "Date / Timestamp" },
         min: xMin,
         max: xMax,
         ticks: {
@@ -77,7 +76,6 @@ export function TransactionsChart({ data, startDate, endDate }: TransactionsChar
           callback: (value, index, values) => {
             if (typeof value !== "number") return value;
             const label = new Date(value).toLocaleDateString();
-            // Don’t repeat the same date under the graph
             const ticks = values as unknown as (number | { value?: number })[];
             const seen = ticks.slice(0, index).map((t) => {
               const v = typeof t === "number" ? t : t?.value;

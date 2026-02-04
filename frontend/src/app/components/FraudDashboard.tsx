@@ -8,7 +8,7 @@ import { useDashboardData } from "@/hooks/useDashboardData";
 import type { FraudEvent, CountryFraudInsight } from "@/types/transaction";
 import { DashboardSkeleton } from "./DashboardSkeleton";
 import { DateRangePicker } from "./DateRangePicker";
-import { TransactionsChart } from "./TransactionsChart";
+import { TransactionsPerHourChart } from "./TransactionsPerHourChart";
 import type { ChartPoint } from "./TransactionsChart";
 
 const DEFAULT_START = "2025-10-17";
@@ -96,9 +96,9 @@ export function FraudDashboard() {
         <>
           <section className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-800/50">
             <h2 className="mb-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              Transactions (X: timestamp, Y: transaction_id)
+              Transactions per hour
             </h2>
-            <TransactionsChart
+            <TransactionsPerHourChart
               data={chartData}
               startDate={appliedStart}
               endDate={appliedEnd}
