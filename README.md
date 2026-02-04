@@ -78,3 +78,27 @@ frontend/
 ```
 
 See **[DESIGN.md](./DESIGN.md)** for design details.
+
+---
+
+## Upload to GitHub
+
+1. **Create a new repository** on [GitHub](https://github.com/new):
+   - Name: `fraud-detection-dashboard` (or **Fraud-Detection-Dashboard**)
+   - Description: *Fraud Detection Dashboard — interactive dashboard for fraud-related insights*
+   - Do **not** initialize with a README (this repo already has one).
+
+2. **Add the remote and push** (replace `YOUR_USERNAME` with your GitHub username):
+
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/fraud-detection-dashboard.git
+git branch -M main
+git push -u origin main
+```
+
+If your default branch is already `master` and you want to keep it:
+
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/fraud-detection-dashboard.git
+git push -u origin master
+```
